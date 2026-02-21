@@ -1,10 +1,22 @@
+const CACHE_NAME = "app-v3";
+
 self.addEventListener("install", function(e) {
   e.waitUntil(
-    caches.open("app").then(function(cache) {
+    caches.open(CACHE_NAME).then(function(cache) {
       return cache.addAll([
-        "/",
-        "/index.html"
+        "./",
+        "./index.html",
+        "./style.css",
+        "./script.js"
       ]);
+    })
+  );
+});
+
+self.addEventListener("fetch", function(e) {
+  e.respondWith(
+    caches.match(e.request).then(function(response) {
+      return response || fetch(e.request);
     })
   );
 });
