@@ -1,4 +1,4 @@
-const CACHE_NAME = "app-v3";
+const CACHE_NAME = "app-final-v1"; // zmieniaj przy każdej większej aktualizacji
 
 self.addEventListener("install", function(e) {
   e.waitUntil(
@@ -6,8 +6,35 @@ self.addEventListener("install", function(e) {
       return cache.addAll([
         "./",
         "./index.html",
-        "./style.css",
-        "./script.js"
+        "./dowodnowy.html",
+        "./all.min.css",
+        "./dowodnowy.css",
+        "./main.css",
+        "./sw.js.pobrane",
+        "./timenev.js.pobrane",
+        "./rozwijka.js.pobrane",
+        "./icon.png",
+        "./card.png",
+        "./checkbo.png",
+        "./checkmark.svg",
+        "./dowodnowybg.png",
+        "./flag.gif",
+        "./godlo.gif",
+        "./kosz.png",
+        "./1.jpg",
+        "./ab001_home.svg",
+        "./ab010_more.svg",
+        "./ac001_services.svg",
+        "./ai001_scanner_qr.svg",
+        "./arrow.svg",
+        "./b002_framed_person.svg",
+        "./madziamojakotka123.svg",
+        "./normal_u391.svg",
+        "./normal_u393.svg",
+        "./normal_u394.svg",
+        "./normal_u408.svg",
+        "./pozdro.svg",
+        "./css/" // cache całego folderu css, jeśli masz dodatkowe pliki w nim
       ]);
     })
   );
